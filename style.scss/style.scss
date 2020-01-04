@@ -1,9 +1,13 @@
 @import 'variables';
 @import 'mixins';
 
-body {
-    @include main();
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
 }
+
 
 header {
     background: $header_footer_color;
@@ -11,9 +15,9 @@ header {
 .map {
     background: $orange-color;
     width: 20%;
-    padding: 18px;
+    padding: 15px;
    a {
-    color: $header-font-color;
+    color: $white-color;
     margin-left: 2px;
     font-size: 20px;
     text-decoration: none;
@@ -27,13 +31,14 @@ header {
 }
   nav {
       width: 30%;
+      margin-left: 30px;
  ul {
      @include flex-nav();
      list-style: none;
  }
  a {
      text-decoration: none;
-     color: $header-font-color;
+     color: $white-color;
      &:hover {
          text-decoration: underline;
      }
@@ -42,3 +47,56 @@ header {
      
   }
 }
+
+.showcase {
+    width: 100%;
+    height: 80vh;
+    background: url('../slike/intro.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+.showcase-wrapper {
+    color: $white-color;
+    margin-bottom: 8em;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    width: 80%;
+    h1 {
+        font-size: 50px;
+        font-weight: normal;
+    }
+
+    h4 {
+        font-size: 20px;
+        margin-top: 0.5em;
+        font-weight: normal;
+    } 
+    
+}
+}
+
+.button {
+    widows: 100%;
+    color: $font-color;
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+   height: 10vh;
+   margin: 15px;
+   li {
+       width: 10%;
+       padding: 0.5em;
+       border: 1px solid grey;
+       margin-left: 2em;
+       border-radius: 50px;
+       text-align: center;
+       
+   }
+}
+}
+
