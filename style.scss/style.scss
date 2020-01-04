@@ -95,8 +95,34 @@ ul {
        margin-left: 2em;
        border-radius: 50px;
        text-align: center;
-       
+
+    &:hover {
+        background: $hover_button;
+        color: $white-color;
+    }     
    }
+}
+}
+
+.main {
+    background: $background_Section;
+    padding: 1em;
+.boxes {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .box {
+        width: 20%;
+        margin: 1em;
+     img {
+         width: 100%;
+         height: 258px;
+     }
+    
+    }
 }
 }
 
