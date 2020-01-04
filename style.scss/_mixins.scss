@@ -1,0 +1,18 @@
+@mixin main {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+@mixin flex-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
