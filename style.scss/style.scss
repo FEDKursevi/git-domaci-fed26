@@ -233,6 +233,16 @@ td{
         }
     }
 
+    footer {
+        background: $header_footer_color;
+        text-align: center;
+        padding: 0.5em;
+        color: $white-color;
+        span {
+            color: $orange-color;
+        }
+    }
+
 
 
 
