@@ -145,6 +145,7 @@ ul {
     text-align: center;
     color: $font-color;
     padding: 2em;
+    margin-bottom: 5em;
 
     h1{
         color: $headline;
@@ -191,7 +192,48 @@ td{
         }
     }
        
-    
+    .contact {
+        background: $background_Section;
+        text-align: center;
+        color: $headline;
+        padding: 1em;
+     
+      
+    .contact-wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 50vh;
+
+        form {
+            background: $orange-color;
+            width: 45%;
+            padding: 1em;
+
+          
+        }
+          input{
+            width: 78%;
+            margin: 5px;
+            padding: 5px;
+          }
+          select {
+              width: 18%;
+              margin-left: 2px;
+              padding: 5px;
+          }
+          input[type="email"] {
+              width: 97%;
+          }
+          textarea {
+              width: 97%;
+              margin: 5px;
+              padding: 5px;
+          }
+        }
+    }
+
+
 
 
 
