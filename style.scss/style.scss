@@ -1,249 +1,354 @@
 @import 'variables';
 @import 'mixins';
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: $font-family;
-}
-
-
-header {
-    background: $header_footer_color;
-    @include flex();
-.map {
-    background: $orange-color;
-    width: 20%;
-    padding: 15px;
-   a {
-    color: $white-color;
-    margin-left: 2px;
-    font-size: 20px;
-    text-decoration: none;
-    &:hover {
-        text-decoration: underline;
-    }
-   } 
-   i {
-       margin-right: 11px;
-   }
-}
-  nav {
-      width: 30%;
-      margin-left: 30px;
- ul {
-     @include flex-nav();
-     list-style: none;
- }
- a {
-     text-decoration: none;
-     color: $white-color;
-     &:hover {
-         text-decoration: underline;
-     }
-
- }
-     
-  }
-}
-
-.showcase {
-    width: 100%;
-    height: 80vh;
-    background: url('../slike/intro.jpg') no-repeat;
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-
-.showcase-wrapper {
-    color: $white-color;
-    margin-bottom: 8em;
-    background: rgba(0,0,0,0.5);
-    width: 80%;
-    h1 {
-        font-size: 50px;
-        font-weight: normal;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: $font-family;
     }
 
-    h4 {
-        font-size: 20px;
-        margin-top: 0.5em;
-        font-weight: normal;
-    } 
-    
-}
-}
-
-.button {
-    widows: 100%;
-    color: $font-color;
-ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-   height: 10vh;
-   margin: 15px;
-   li {
-       width: 10%;
-       padding: 0.5em;
-       border: 1px solid grey;
-       margin-left: 2em;
-       border-radius: 50px;
-       text-align: center;
-
-    &:hover {
-        background: $hover_button;
-        color: $white-color;
-    }     
-   }
-}
-}
-
-.main {
-    background: $background_Section;
-    padding: 1em;
-.boxes {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    .box {
-        width: 20%;
-        margin: 1em;
-        position: relative;
-        &:hover .overlay {
-            display: block;
-        }
-     img {
-         width: 100%;
-         height: 258px;
-     }
-     .overlay {
-         position: absolute;
-         background: rgba(255,255,255,0.5);
-         width: 100%;
-         height: 100px;
-         font-weight: bold;
-         padding: 1em;
-         display: none;   
-     }
-    
-    }
-}
-}
-
-.pricing-area {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-    color: $font-color;
-    padding: 2em;
-    margin-bottom: 5em;
-
-    h1{
-        color: $headline;
-        font-size: 40px;
-        margin-bottom: 1em;
-    }
-    h5 {
-        font-size: 15px;
-        margin-bottom: 5em;
-    }
-   
-}
-
-table{
-   
-	width: 27%;
-	margin: 0 auto;
-    border-collapse: collapse;
-   margin-right: 50px;
-  
-}
-th{
-    border: 1px solid black;
-    background: $orange-color;
-    color: $white-color;
-    font-weight: normal;
-}
-td{
-    border: 1px solid black;
-    text-align: center;
-    background: $header_footer_color;
-    color: $white-color;
-    padding: 5px;
-}
-
-.table2 {
-    width: 94%;
-    .location, th{
-        background-color: $orange-color;
-    }
-        td{
-            background: $white-color;
-            color: $font-color;
-        }
-    }
-       
-    .contact {
-        background: $background_Section;
-        text-align: center;
-        color: $headline;
-        padding: 1em;
-     
-      
-    .contact-wrapper {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 50vh;
-
-        form {
-            background: $orange-color;
-            width: 45%;
-            padding: 1em;
-
-          
-        }
-          input{
-            width: 78%;
-            margin: 5px;
-            padding: 5px;
-          }
-          select {
-              width: 18%;
-              margin-left: 2px;
-              padding: 5px;
-          }
-          input[type="email"] {
-              width: 97%;
-          }
-          textarea {
-              width: 97%;
-              margin: 5px;
-              padding: 5px;
-          }
-        }
-    }
-
-    footer {
+    header {
         background: $header_footer_color;
-        text-align: center;
-        padding: 0.5em;
+        @include flex();
+
+    .map {
+        background: $orange-color;
+        width: 20%;
+        padding: 15px;
+
+    a {
         color: $white-color;
-        span {
-            color: $orange-color;
+        margin-left: 2px;
+        font-size: 20px;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
         }
+    } 
+    i {
+        margin-right: 11px;
+    }
+    }
+    nav {
+        width: 30%;
+        margin-left: 30px;
+    ul {
+        @include flex-nav();
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        color: $white-color;
+        &:hover {
+            text-decoration: underline;
+        }
+    }   
+   }
+ }
+    .showcase {
+        width: 100%;
+        height: 80vh;
+        background: url('../slike/intro.jpg') no-repeat;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        @include showcase-flex();
+
+    .showcase-wrapper {
+        color: $white-color;
+        margin-bottom: 8em;
+        background: $showcase-background;
+        width: 80%;
+        h1 {
+            font-size: 50px;
+            font-weight: normal;
+        }
+
+        h4 {
+            font-size: 20px;
+            margin-top: 0.5em;
+            font-weight: normal;
+        } 
+        
+    }
+ }
+
+    .buttons-area {
+        width: 100%;
+        color: $font-color;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 15vh;
+    
+    .btn {
+        padding: 1em;
+        border-radius: 50px;
+        border: 1px solid gray;
+        background: $white-color;
+        color: $font-color;
+        margin: 1em;
+
+        &:hover {
+            background: $hover_button;
+            color: $white-color;
+        }     
+    }
+    }
+    .main {
+        background: $background_Section;
+        padding: 1em;
+    .boxes {
+        @include flex-center();
+        width: 80%;
+        margin: 0 auto;
+        .box {
+            width: 20%;
+            margin: 1em;
+            position: relative;
+
+        &:hover .overlay {
+                display: block;
+            }
+        img {
+            width: 100%;
+            height: 258px;
+        }
+        .overlay {
+            position: absolute;
+            background: $overlay-background;
+            width: 100%;
+            height: 100px;
+            font-weight: bold;
+            padding: 1em;
+            display: none;   
+        }  
+     }
+    }
+ }
+    .pricing-area {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        color: $font-color;
+        padding: 2em;
+        margin-bottom: 5em;
+
+        h1{
+            color: $headline;
+            font-size: 40px;
+            margin-bottom: 1em;
+        }
+
+        h5 {
+            font-size: 15px;
+            margin-bottom: 5em;
+        }
+    
     }
 
+    table {
+        width: 27%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        margin-right: 50px;
+    }
+    .checkPrices {
+        display: none;
+    }
+    th {
+        border: 1px solid black;
+        background: $orange-color;
+        color: $white-color;
+        font-weight: normal;
+    }
+    td {
+        border: 1px solid black;
+        text-align: center;
+        background: $header_footer_color;
+        color: $white-color;
+        padding: 5px;
+    }
 
+    .table2 {
+        width: 94%;
 
+        .location, th {
+            background-color: $orange-color;
+        }
+            td {
+                background: $white-color;
+                color: $font-color;
+            }
+        }
+        
+        .contact {
+            background: $background_Section;
+            text-align: center;
+            color: $headline;
+            padding: 1em;
+        
+        .contact-wrapper {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 50vh;
 
+            form {
+                background: $orange-color;
+                width: 45%;
+                padding: 1em;
+            }
 
+            input {
+                width: 78%;
+                margin: 5px;
+                padding: 5px;
+            }
+            select {
+                width: 18%;
+                margin-left: 2px;
+                padding: 5px;
+            }
+            input[type="email"] {
+                width: 97%;
+            }
+            textarea {
+                width: 97%;
+                margin: 5px;
+                padding: 5px;
+            }
+            }
+        }
+
+        footer {
+            background: $header_footer_color;
+            text-align: center;
+            padding: 0.5em;
+            color: $white-color;
+    
+         span {
+                color: $orange-color;
+            }
+        }
+
+        @media only screen and (min-width: 600px) and (max-width: 900px) {
+
+            header .map {
+                width: 25%;
+            }
+                header nav{
+                    width: 40%;
+                }
+
+                .main .boxes .box {
+                    width: 42%;
+                }
+
+                .pricing-area .table2 {
+                    width: 88%;
+                }
+                table {
+                    width: 25%;
+                }
+
+                .contact .contact-wrapper {
+                    flex-direction: column;
+                    height: 80vh;
+            
+            form {
+                width: 100%;
+            }
+            select {
+                width: 97%;
+            }
+            input {
+                width: 97%;
+            }
+      }
+ }
+            
+        @media only screen and (max-width: 600px) {
+            header {
+                flex-direction: column;
+            .map {
+                width: 100%;
+            }
+            ul {
+                flex-direction: column;
+            li {
+                padding: 10px;
+            }
+            }
+            }
+
+            .showcase {
+                background: none;
+                background-color: black;
+                height: auto;
+            .showcase-wrapper {
+                margin: 0 auto;
+            
+            h1{
+                font-size: 40px;
+            }
+            }
+        }
+            .buttons-area {
+            width: 100%;
+
+          .btn {
+                margin: 1em;
+            }
+         }
+
+        .main .boxes {
+                flex-direction: column;
+    
+                .box {
+                    width: 80%;
+
+                img {
+                    height: 275px;
+                    }
+
+                 .overlay {
+                    display: block;
+                    }
+                }
+            }
+
+            .pricing table {
+                display: none;
+            }
+            .checkPrices {
+                display: block;
+                margin: 0 auto;
+                padding: 15px;
+                border-radius: 50px;
+                border: 1px solid gray;
+                background: $white-color;
+                color: $font-color;
+            }
+
+        .contact .contact-wrapper {
+                flex-direction: column;
+                height: 80vh;
+        form {
+            width: 100%;
+        }
+        select {
+            width: 97%;
+        }
+        input {
+            width: 97%;
+        }
+            }
+
+        }
+
+    
+
+    
