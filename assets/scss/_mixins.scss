@@ -1,4 +1,5 @@
 @mixin display-flex($direction, $align, $justify) {
+  // display flex mixin
   display: flex;
   flex-direction: $direction;
   align-items: $align;
@@ -6,12 +7,14 @@
 }
 
 @mixin background {
+  // background-image mixin
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 @mixin button($display) {
+  // all elements with button tag, style mixin
   button {
     font-size: 1rem;
     padding: 1rem 2rem;
@@ -36,12 +39,14 @@
 }
 
 @mixin h2 {
+  // h2 style mixin
   font-size: 1.9rem;
   text-transform: uppercase;
   margin: 2rem 0;
 }
 
 @mixin mQ($width) {
+  // all media queries mixin
   @media screen and (max-width: $width) {
     @content;
   }
