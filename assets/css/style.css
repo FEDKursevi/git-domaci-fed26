@@ -210,6 +210,12 @@ main section {
   }
 }
 
+@media screen and (max-width: 370px) {
+  .section-a div h1 {
+    font-size: 2rem;
+  }
+}
+
 .section-a div h3 {
   font-size: 1.5rem;
   font-weight: normal;
@@ -385,6 +391,12 @@ main section {
 .section-c div div .hover-div h3 {
   font-size: 1.5rem;
   font-weight: normal;
+}
+
+@media screen and (max-width: 400px) {
+  .section-c div div .hover-div h3 {
+    font-size: 1rem;
+  }
 }
 
 .section-c div div:hover .hover-div {
