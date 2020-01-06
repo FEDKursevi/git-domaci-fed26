@@ -1,0 +1,7 @@
+@function smart-color($color) {
+  @if (lightness($color) <52) {
+    @return white;
+  } @else {
+    @return black;
+  }
+}

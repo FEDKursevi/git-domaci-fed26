@@ -1,0 +1,290 @@
+@import "./vars";
+@import "./mixins";
+@import "./functions";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  height: $header-height;
+
+  nav {
+    height: 100%;
+    width: 100%;
+    @include display-flex(row, center, flex-start);
+    background: $primary-color;
+
+    div {
+      height: 100%;
+      width: 400px;
+      background: $accent-color;
+      @include display-flex(row, center, flex-start);
+      padding: 0 2rem;
+
+      img {
+        height: 60%;
+      }
+      a {
+        font-size: $logo-font;
+        color: smart-color($accent-color);
+      }
+    }
+
+    ul {
+      height: 100%;
+      width: 600px;
+      list-style: none;
+      @include display-flex(row, center, space-around);
+
+      li {
+        height: 100%;
+
+        a {
+          @extend li;
+          @include display-flex(row, center, center);
+          color: smart-color($primary-color);
+          text-decoration: none;
+          font-size: $logo-font/100 * 80;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  width: 100%;
+
+  section {
+    width: 100%;
+    padding: $section-padding;
+    text-align: center;
+  }
+}
+
+.section-a {
+  height: calc(100vh - #{$header-height});
+  background: url("../slike/intro.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  div {
+    width: $section-content-width;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background: rgba(55, 66, 73, 0.5);
+    text-align: center;
+
+    h1 {
+      font-size: 4rem;
+      font-weight: normal;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: normal;
+    }
+  }
+}
+
+.section-b {
+  div {
+    width: $section-content-width;
+    margin: 0 auto;
+    @include display-flex(row, center, flex-end);
+
+    button {
+      font-size: 1rem;
+      padding: 1rem 2rem;
+      margin: 1rem;
+      background: none;
+      border: 2px solid #e3e5e6;
+      border-radius: 50px;
+      color: grey;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+      transition-property: color, background;
+
+      &:hover {
+        background: $primary-color;
+        color: white;
+        transition: 0.2s ease-in-out;
+        transition-property: color, background;
+      }
+    }
+  }
+}
+
+.section-c {
+  background: $section-background;
+  div {
+    width: $section-content-width;
+    margin: 0 auto;
+    @include display-flex(row, center, center);
+    flex-wrap: wrap;
+    padding: 2rem 0;
+
+    div {
+      width: 16rem;
+      height: 20rem;
+      margin: 1rem;
+      padding: 0;
+      cursor: pointer;
+      @include display-flex(column, center, flex-start);
+
+      .hover-div {
+        width: 100%;
+        height: 40%;
+        margin: 0;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.5);
+        @include display-flex(column, flex-start, flex-start);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+
+        h3 {
+          font-size: 1.5rem;
+          font-weight: normal;
+        }
+      }
+
+      &:hover .hover-div {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+    }
+
+    @for $i from 1 through 6 {
+      #div#{$i} {
+        background: url("../slike/#{$i}.jpg");
+      }
+    }
+  }
+}
+
+.section-d {
+  text-align: center;
+
+  h2 {
+    @include h2;
+  }
+
+  h4 {
+    font-size: 1rem;
+    color: #878b97;
+    font-weight: normal;
+  }
+
+  table {
+    width: 800px;
+    border-collapse: collapse;
+    margin: 2rem auto 5rem auto;
+
+    tr,
+    th,
+    td {
+      height: $input-height;
+    }
+
+    td {
+      border: 1px solid #929292;
+    }
+
+    .primary {
+      background: $primary-color;
+      color: smart-color($primary-color);
+      border: 1px solid #929292;
+    }
+
+    .accent {
+      background: $accent-color;
+      color: smart-color($accent-color);
+    }
+  }
+}
+
+.section-e {
+  background: $section-background;
+
+  h2 {
+    @include h2;
+  }
+
+  div {
+    width: $section-content-width;
+    margin: 0 auto;
+    @include display-flex(row, flex-start, space-between);
+    padding: 1rem 0 3rem 0;
+
+    form {
+      width: 60%;
+      background: $accent-color;
+      padding: 2rem;
+      margin-left: 2rem;
+
+      select,
+      input,
+      textarea {
+        display: block;
+        height: $input-height;
+        padding: 10px;
+        font-size: 1rem;
+        background: white;
+        border: none;
+      }
+
+      textarea {
+        height: 2 * $input-height;
+      }
+
+      input[type="email"],
+      textarea {
+        width: 100%;
+      }
+
+      select {
+        float: left;
+        width: 25%;
+      }
+
+      input[type="text"] {
+        float: right;
+        width: 70%;
+      }
+
+      input[type="email"] {
+        margin: calc(2rem + #{$input-height}) 0 2rem 0;
+        clear: both;
+      }
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  background: $primary-color;
+  color: white;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+
+  span {
+    color: $accent-color;
+  }
+}
