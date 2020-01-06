@@ -5,8 +5,44 @@
   justify-content: $justify;
 }
 
+@mixin background {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin button($display) {
+  button {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    background: none;
+    border: 2px solid #e3e5e6;
+    border-radius: 50px;
+    color: grey;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    transition-property: color, background;
+    display: $display;
+    outline: none;
+
+    &:hover {
+      background: $primary-color;
+      color: white;
+      transition: 0.2s ease-in-out;
+      transition-property: color, background;
+    }
+  }
+}
+
 @mixin h2 {
   font-size: 1.9rem;
   text-transform: uppercase;
   margin: 2rem 0;
+}
+
+@mixin mQ($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
 }

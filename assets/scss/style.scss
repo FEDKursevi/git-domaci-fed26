@@ -23,6 +23,7 @@ header {
     width: 100%;
     @include display-flex(row, center, flex-start);
     background: $primary-color;
+    position: relative;
 
     div {
       height: 100%;
@@ -30,6 +31,12 @@ header {
       background: $accent-color;
       @include display-flex(row, center, flex-start);
       padding: 0 2rem;
+      @include mQ(1100px) {
+        width: 250px;
+      }
+      @include mQ(768px) {
+        width: 100%;
+      }
 
       img {
         height: 60%;
@@ -45,6 +52,18 @@ header {
       width: 600px;
       list-style: none;
       @include display-flex(row, center, space-around);
+      @include mQ(1100px) {
+        width: 500px;
+      }
+      @include mQ(768px) {
+        position: absolute;
+        top: $header-height;
+        left: 0;
+        width: 100%;
+        @include display-flex(column, center, center);
+        background: $primary-color;
+        height: 20rem;
+      }
 
       li {
         height: 100%;
@@ -78,9 +97,7 @@ main {
 .section-a {
   height: calc(100vh - #{$header-height});
   background: url("../slike/intro.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  @include background;
 
   div {
     width: $section-content-width;
@@ -91,6 +108,16 @@ main {
     color: white;
     background: rgba(55, 66, 73, 0.5);
     text-align: center;
+    @include mQ(1100px) {
+      top: 50%;
+    }
+    @include mQ(768px) {
+      width: 100%;
+      top: 100%;
+      transform: translate(-50%, -100%);
+      background: black;
+      padding: 1rem;
+    }
 
     h1 {
       font-size: 4rem;
@@ -109,26 +136,12 @@ main {
     width: $section-content-width;
     margin: 0 auto;
     @include display-flex(row, center, flex-end);
-
-    button {
-      font-size: 1rem;
-      padding: 1rem 2rem;
-      margin: 1rem;
-      background: none;
-      border: 2px solid #e3e5e6;
-      border-radius: 50px;
-      color: grey;
-      cursor: pointer;
-      transition: 0.2s ease-in-out;
-      transition-property: color, background;
-
-      &:hover {
-        background: $primary-color;
-        color: white;
-        transition: 0.2s ease-in-out;
-        transition-property: color, background;
-      }
+    @include mQ(768px) {
+      width: 90%;
+      justify-content: space-evenly;
     }
+
+    @include button(block);
   }
 }
 
@@ -140,6 +153,12 @@ main {
     @include display-flex(row, center, center);
     flex-wrap: wrap;
     padding: 2rem 0;
+    @include mQ(1010px) {
+      width: 90%;
+    }
+    @include mQ(768px) {
+      width: 95%;
+    }
 
     div {
       width: 16rem;
@@ -148,6 +167,13 @@ main {
       padding: 0;
       cursor: pointer;
       @include display-flex(column, center, flex-start);
+      @include mQ(1100px) {
+        width: 20rem;
+      }
+      @include mQ(768px) {
+        width: 100%;
+        height: 20rem;
+      }
 
       .hover-div {
         width: 100%;
@@ -158,6 +184,9 @@ main {
         @include display-flex(column, flex-start, flex-start);
         opacity: 0;
         transition: opacity 0.3s ease;
+        @include mQ(768px) {
+          opacity: 1;
+        }
 
         h3 {
           font-size: 1.5rem;
@@ -174,6 +203,7 @@ main {
     @for $i from 1 through 6 {
       #div#{$i} {
         background: url("../slike/#{$i}.jpg");
+        @include background;
       }
     }
   }
@@ -196,6 +226,12 @@ main {
     width: 800px;
     border-collapse: collapse;
     margin: 2rem auto 5rem auto;
+    @include mQ(1100px) {
+      width: 80%;
+    }
+    @include mQ(768px) {
+      display: none;
+    }
 
     tr,
     th,
@@ -218,6 +254,15 @@ main {
       color: smart-color($accent-color);
     }
   }
+
+  @include button(none);
+
+  button {
+    @include mQ(768px) {
+      display: block;
+      margin: 2rem auto;
+    }
+  }
 }
 
 .section-e {
@@ -232,12 +277,22 @@ main {
     margin: 0 auto;
     @include display-flex(row, flex-start, space-between);
     padding: 1rem 0 3rem 0;
+    @include mQ(1100px) {
+      @include display-flex(column, center, center);
+    }
+    @include mQ(768px) {
+      width: 90%;
+    }
 
     form {
       width: 60%;
       background: $accent-color;
       padding: 2rem;
       margin-left: 2rem;
+      @include mQ(1100px) {
+        margin: 2rem 0;
+        width: 100%;
+      }
 
       select,
       input,
