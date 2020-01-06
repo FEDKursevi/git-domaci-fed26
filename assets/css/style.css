@@ -204,9 +204,21 @@ main section {
   font-weight: normal;
 }
 
+@media screen and (max-width: 600px) {
+  .section-a div h1 {
+    font-size: 3rem;
+  }
+}
+
 .section-a div h3 {
   font-size: 1.5rem;
   font-weight: normal;
+}
+
+@media screen and (max-width: 600px) {
+  .section-a div h3 {
+    font-size: 1rem;
+  }
 }
 
 .section-b div {
@@ -233,6 +245,13 @@ main section {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section-b div {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -604,6 +623,10 @@ main section {
 .section-e div form input[type="email"] {
   margin: calc(2rem + 2.2rem) 0 2rem 0;
   clear: both;
+}
+
+.section-e div iframe {
+  width: 100%;
 }
 
 footer {
