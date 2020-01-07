@@ -1,3 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
 
+nav {
+  background-color: #374249;
+}
+nav div {
+  display: inline-block;
+  background-color: #f75311;
+  width: 15%;
+}
+nav div img {
+  height: 40px;
+  width: 40px;
+  float: left;
+  margin-left: 15px;
+}
+nav div h3 {
+  padding-top: 5px;
+  color: white;
+  text-decoration: underline;
+  font-size: 20px;
+  font-weight: 100;
+}
+nav ul {
+  display: inline-block;
+  height: 100%;
+  width: 600px;
+}
+nav ul li {
+  display: inline-block;
+  padding-left: 20px;
+  padding-right: 50px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: small;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.naslovna {
+  background: url("/slike/intro.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 650px;
+}
+.naslovna div {
+  width: 60%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background: rgba(55, 66, 73, 0.5);
+  text-align: center;
+}
+.naslovna div h1 {
+  font-size: 40px;
+  font-weight: normal;
+}
+.naslovna div h3 {
+  font-weight: normal;
+}
 
 /*# sourceMappingURL=stil.css.map */
