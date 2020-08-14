@@ -1,0 +1,371 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  height: 80px;
+  width: 100%;
+}
+header .location {
+  width: 25%;
+  background-color: #f75311;
+}
+header .location img {
+  height: 3em;
+  position: relative;
+  left: 30px;
+}
+header .location span {
+  font-size: 30px;
+  position: relative;
+  left: 30px;
+  bottom: 30px;
+  font-weight: bold;
+}
+header .location span a {
+  color: #ffffff;
+  text-decoration: none;
+}
+header .location span:hover a {
+  text-decoration: underline;
+}
+header nav {
+  float: right;
+  background-color: #374249;
+  width: 75%;
+  height: 100%;
+  position: relative;
+  bottom: 80px;
+}
+header nav ul {
+  list-style: none;
+}
+header nav ul li {
+  display: inline;
+  margin: 20px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 80px;
+}
+header nav ul li:hover a {
+  text-decoration: underline;
+}
+
+.section_first {
+  width: 100%;
+  height: 100%;
+  background-image: url(../slike/intro.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.section_first .headings {
+  width: 70%;
+  height: 120px;
+  background: #374249;
+  opacity: 70%;
+  text-align: center;
+  position: absolute;
+  top: 700px;
+  left: 250px;
+}
+.section_first .headings h1, .section_first .headings h2 {
+  color: #ffffff;
+  position: relative;
+  font-weight: bold;
+}
+.section_first .headings h1 {
+  font-weight: bold;
+  font-size: 2.5em;
+  display: inline-block;
+}
+
+.section_second {
+  height: 100px;
+  width: 100%;
+}
+.section_second .buttons {
+  text-align: right;
+  top: 25%;
+  line-height: 100px;
+}
+.section_second .buttons :last-child {
+  margin-right: 200px;
+}
+.section_second .buttons button {
+  padding: 20px 30px;
+  border-radius: 25px;
+  margin: 0px 10px;
+  border: 1px solid #797979;
+  font-weight: bold;
+  font-size: 20px;
+}
+.section_second .buttons button:hover {
+  color: #ffffff;
+  background-color: #797979;
+  transition: 400ms;
+  cursor: pointer;
+}
+
+.section_third {
+  background-color: #f3f7f9;
+  width: 100%;
+  height: 47em;
+  padding: 30px 100px 40px 100px;
+}
+.section_third .column {
+  width: 20%;
+  height: 20em;
+  float: left;
+  margin: 1em;
+}
+.section_third .column .columnInfo {
+  display: none;
+}
+.section_third .column:hover .columnInfo {
+  display: block;
+  width: 100%;
+  height: 40%;
+  background: rgba(255, 255, 255, 0.5);
+}
+.section_third .column h2, .section_third .column h3 {
+  color: #000000;
+  font-weight: bold;
+}
+.section_third .column1 {
+  background: url("../slike/1.jpg");
+  background-size: cover;
+}
+.section_third .column2 {
+  background: url("../slike/2.jpg");
+  background-size: cover;
+}
+.section_third .column3 {
+  background: url("../slike/3.jpg");
+  background-size: cover;
+}
+.section_third .column4 {
+  background: url("../slike/4.jpg");
+  background-size: cover;
+}
+.section_third .column5 {
+  background: url("../slike/5.jpg");
+  background-size: cover;
+}
+.section_third .column6 {
+  background: url("../slike/6.jpg");
+  background-size: cover;
+}
+
+.pricing {
+  padding: 40px 0 50px 0;
+}
+.pricing .prices {
+  margin-bottom: 30px;
+  line-height: 70px;
+}
+.pricing .prices h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #374249;
+}
+.pricing .prices h3 {
+  color: #797979;
+  text-align: center;
+}
+.pricing table {
+  width: 60%;
+  height: 40%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+.pricing table .white {
+  border: none;
+}
+.pricing table .orange {
+  background: #f75311;
+  color: #ffffff;
+}
+.pricing table .dark {
+  background: #374249;
+  color: #ffffff;
+}
+.pricing table th, .pricing table td {
+  border: 1px solid #797979;
+  text-align: center;
+  padding: 0.5em;
+}
+.pricing .checkPrices {
+  display: none;
+}
+
+.maps {
+  width: 100%;
+  background: #f3f7f9;
+  padding: 30px 150px 40px 100px;
+  float: left;
+}
+.maps h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.maps .map {
+  float: left;
+}
+.maps form {
+  float: right;
+  background: #f75311;
+  padding: 20px;
+  width: 60%;
+}
+.maps form select, .maps form input {
+  margin-bottom: 20px;
+}
+.maps form .title {
+  width: 20%;
+  padding: 10px;
+}
+.maps form .name {
+  width: 79%;
+  padding: 10px;
+}
+.maps form .email {
+  width: 100%;
+  padding: 10px;
+}
+.maps form textarea {
+  width: 100%;
+  height: 80px;
+}
+
+footer {
+  width: 100%;
+  height: 70px;
+  background: #374249;
+  text-align: center;
+  overflow: auto;
+  color: #ffffff;
+  line-height: 70px;
+}
+footer span {
+  color: #f75311;
+}
+
+@media screen and (max-width: 1178px) {
+  .section_third {
+    height: 70em;
+  }
+  .section_third .column {
+    width: 40%;
+  }
+
+  .maps .map {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .maps form {
+    display: block;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 830px) {
+  header {
+    height: auto;
+    /*position: absolute;*/
+  }
+  header .location {
+    width: 100%;
+    position: relative;
+  }
+  header nav {
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+  header nav ul li a {
+    display: block;
+    text-align: center;
+    line-height: 1.5em;
+  }
+
+  .section_first {
+    background: #000000;
+    height: 600px;
+  }
+  .section_first .headings {
+    background: none;
+    top: 400px;
+    left: 100px;
+  }
+  .section_first .headings h1 {
+    font-size: 2em;
+  }
+  .section_first .headings h2 {
+    font-size: 1em;
+  }
+
+  .section_second .buttons {
+    text-align: center;
+  }
+  .section_second .buttons :last-child {
+    margin-right: 0;
+  }
+  .section_second .buttons button {
+    padding: 10px 15px;
+  }
+
+  .section_third {
+    padding: 10px;
+  }
+  .section_third .column {
+    width: 100%;
+  }
+
+  .pricing {
+    padding: 10px;
+  }
+  .pricing table {
+    display: none;
+  }
+  .pricing .checkPrices {
+    display: block;
+    margin: 0 0 30px 300px;
+  }
+  .pricing .checkPrices button {
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #797979;
+    background: #ffffff;
+  }
+
+  .maps {
+    padding: 20px;
+  }
+  .maps .map {
+    margin-bottom: 20px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

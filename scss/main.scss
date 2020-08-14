@@ -1,0 +1,421 @@
+@import'mixins';
+@import'vars';
+
+* {
+    @include box_sizing;
+    margin: 0;
+    padding: 0;
+    font-family: $main_font;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+
+    .location {
+        width: 25%;
+        background-color: $orange_color;
+
+        img {
+            height: 3em;
+            position: relative;
+            left: 30px;
+        }
+
+        span {
+            font-size: 30px;
+            position: relative;
+            left: 30px;
+            bottom: 30px;
+            font-weight: bold;
+
+            a {
+                color: #ffffff;
+                text-decoration: none;
+            }
+
+            &:hover a {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    nav {
+        float: right;
+        background-color: $dark_blue;
+        width: 75%;
+        height: 100%;
+        position: relative;
+        bottom: 80px;
+
+        ul {
+            list-style: none;
+
+            li {
+                display: inline;
+                margin: 20px;
+                a {
+                    text-decoration: none;
+                    color: #ffffff;
+                    font-weight: bold;
+                    line-height: 80px;
+                }
+                &:hover a {
+                    text-decoration: underline;
+                }
+            }
+        }
+        
+    }
+}
+
+.section_first {
+    width: 100%;
+    height: 100%;
+    background-image: url(../slike/intro.jpg);
+    @include background_cover;
+
+    .headings {
+        width: 70%;
+        height: 120px;
+        background: $dark_blue;
+        opacity: 70%;
+        text-align: center;
+        position: absolute;
+        top: 700px;
+        left: 250px;
+        
+
+        h1, h2 {
+            color: #ffffff;
+            position: relative;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-weight: bold;
+            font-size: 2.5em;
+            display: inline-block;
+            
+        }
+    }
+}
+
+.section_second {
+    height: 100px;
+    width: 100%;
+
+    .buttons {
+        text-align: right;
+        top: 25%;
+        line-height: 100px;
+
+        :last-child{
+            margin-right: 200px;
+        } 
+        
+        button {
+            padding: 20px 30px;
+            border-radius: 25px;
+            margin: 0px 10px;
+            border: 1px solid $font_color;
+            font-weight: bold;
+            font-size: 20px; 
+            
+            &:hover {
+                color: #ffffff;
+                background-color: $font_color;
+                transition: 400ms;
+                cursor: pointer;
+            }
+        }        
+    }    
+}
+
+.section_third {
+    background-color: $background_color;
+    width: 100%;
+    height: 47em;
+    padding: 30px 100px 40px 100px;
+
+    .column {
+        width: 20%;
+        height: 20em;
+        float: left;
+        margin: 1em;
+
+        .columnInfo {
+            display: none;
+        }
+
+        &:hover .columnInfo {
+            display: block;
+            width: 100%;
+            height: 40%;
+            background: rgba(255, 255, 255, 0.5)
+        }
+
+        h2,h3 {
+            color: #000000;
+            font-weight: bold;                   
+        }        
+    }
+
+    @for $i from 1 through 6 {
+        & .column#{$i} {
+            background: url('../slike/#{$i}.jpg');
+            background-size: cover;
+        }        
+    }
+}
+
+.pricing {
+    padding: 40px 0 50px 0;
+
+    .prices {
+        margin-bottom: 30px;
+        line-height: 70px;
+
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 900;
+            color: $dark_blue;
+        }
+    
+        h3 {
+            color: $font_color;
+            text-align: center;
+        }
+    }
+    table {
+        width: 60%;
+        height: 40%;
+        border-collapse: collapse;
+        margin: 0 auto;
+
+        .white {
+            border: none;
+        }
+
+        .orange {
+            background: $orange_color;
+            color: #ffffff;
+        }
+
+        .dark {
+            background: $dark_blue;
+            color: #ffffff;
+        }
+
+        th, td {
+            border: 1px solid $font_color;
+            text-align: center;
+            padding: .5em;
+            
+        }
+    } 
+    .checkPrices {
+        display: none;
+    }  
+}
+
+.maps {
+    width: 100%;
+    background: $background_color;
+    padding: 30px 150px 40px 100px;
+    float: left;
+
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+
+    .map {
+        float: left;
+    }
+
+    form {
+        float: right;
+        background: $orange_color;
+        padding: 20px;
+        width: 60%;
+
+        select, input {
+            margin-bottom: 20px;
+        }
+
+        .title {
+            width: 20%;
+            padding: 10px;
+        }
+
+        .name {
+            width: 79%;
+            padding: 10px;
+        }
+
+        .email {
+            width: 100%;
+            padding: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 80px;
+        }
+    }    
+}
+
+footer {
+    width: 100%;
+    height: 70px;
+    background: $dark_blue;
+    text-align: center;
+    overflow: auto;
+    color: #ffffff;
+    line-height: 70px;
+    
+    span {
+        color: $orange_color;
+    }
+}
+
+@media screen and (max-width: 1178px) {
+
+    .section_third {
+        height: 70em;
+
+        .column {
+            width: 40%;
+        }        
+    }
+    .pricing{
+        
+        .prices{
+            
+        }
+        
+    }
+
+    .maps {
+
+        .map {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        form {
+            display: block;
+            width: 100%;
+        }
+    }
+
+}
+
+@media screen and (max-width: 830px) {
+
+    header{
+        height: auto;
+        /*position: absolute;*/
+        
+        .location{
+            width: 100%;
+            position: relative;
+        } 
+        
+        nav{
+            width: 100%;
+            position: relative;
+            top: 0;
+            ul{
+                li{
+                    a{
+                        display: block;
+                        text-align: center;
+                        line-height: 1.5em;
+                        
+                    }
+                }
+            }
+        }
+    }
+    .section_first{
+        background: #000000;
+        height: 600px;  
+          
+        .headings{
+            background: none;
+            top: 400px;
+            left: 100px;
+        
+            h1{
+                font-size: 2em;               
+            }
+            h2{
+                font-size: 1em;
+            }
+        }
+    }
+    .section_second{
+        .buttons{
+            text-align: center;
+            :last-child{
+                margin-right: 0;
+            } 
+            button{
+                padding: 10px 15px;
+            }
+        }
+    }
+    .section_third{
+        padding: 10px;
+        .column{
+            width: 100%;
+            
+        }
+    }
+    .pricing{
+        padding: 10px;
+        
+        table{
+            display: none;
+        }
+        .checkPrices{
+            display: block;
+            margin: 0 0 30px 300px;
+            button{
+                padding: 10px 15px;
+                border-radius: 25px;
+                border: 1px solid $font_color;
+                background: #ffffff;
+                
+            }
+        }
+    }
+    .maps{
+        padding: 20px;
+        .map{
+            margin-bottom: 20px;
+        }
+    }
+    
+    
+    
+    
+}
+
+        
+
